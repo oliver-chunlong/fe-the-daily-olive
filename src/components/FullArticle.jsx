@@ -43,8 +43,7 @@ function FullArticle({ article, numOfComments }) {
       <h1>{title}</h1>
       <img src={article_img_url} alt={title} width="700" />
       <p>
-        <strong>Topic:</strong> {topic} | <strong>By:</strong> {author} |{" "}
-        <strong>Date:</strong> {new Date(created_at).toLocaleDateString()}
+        <strong>Topic:</strong> {topic} | <strong>By:</strong> {author} | <strong>Date:</strong> {new Date(created_at).toLocaleDateString()}
       </p>
       <p>{body}</p>
       <button onClick={handleVote} disabled={voting || hasVoted}>

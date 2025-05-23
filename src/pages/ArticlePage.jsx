@@ -33,7 +33,7 @@ function ArticlePage() {
   return (
     <div>
       <ArticlePanel article={article} numOfComments={comments.length} />
-      <CommentsPanel comments={comments} />
+      <CommentsPanel comments={comments} article_id={article_id} />
     </div>
   );
 }
