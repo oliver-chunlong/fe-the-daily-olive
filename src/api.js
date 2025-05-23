@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const theDailyOliveApi = axios.create({
-  baseURL: 'http://localhost:9090/api',
+  baseURL: 'https://the-daily-olive.onrender.com/api',
 });
 
 export default theDailyOliveApi;
