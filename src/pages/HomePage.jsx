@@ -28,7 +28,7 @@ function HomePage() {
         <ArticleSnippet
           key={article.article_id}
           article={article}
-          numOfComments={article.comment_count ?? 0}
+          numOfComments={article.comment_count}
         />
       ))}
     </main>

@@ -1,10 +1,14 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function NavBar({ setSearchTopic, orderBy, setOrderBy }) {
+function NavBar({ setOrderBy, orderBy }) {
   const [input, setInput] = useState("");
-  
+  const navigate = useNavigate();
+
   function handleSearch() {
-    setSearchTopic(input);
+    if (input.trim()) {
+      navigate(`/topics/${input.trim().toLowerCase()}`);
+    }
   }
 
   function handleSort() {
