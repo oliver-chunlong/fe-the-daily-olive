@@ -51,7 +51,7 @@ function CommentForm({ article_id, onCommentPosted }) {
         disabled={posting}
       />
       <br />
-      <button type="submit" disabled={posting || !comment.trim()}>
+      <button type="submit" disabled={posting || !comment}>
         {posting ? "Posting..." : "Post Comment"}
       </button>
       {error && <p style={{ color: "red" }}>{error}</p>}
