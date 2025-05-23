@@ -1,4 +1,17 @@
-function CommentsPanel({ comments, numOfComments }) {
+import CommentForm from "./CommentForm";
+import { useState } from "react";
+
+function CommentsPanel({
+  comments: initialComments,
+  numOfComments,
+  article_id,
+}) {
+  const [comments, setComments] = useState(initialComments);
+
+  function handleNewComment(newComment) {
+    setComments((currComments) => [newComment, ...currComments]);
+  }
+
   if (numOfComments === 0) {
     return (
       <section>
@@ -21,6 +34,10 @@ function CommentsPanel({ comments, numOfComments }) {
           <hr />
         </div>
       ))}
+      <CommentForm
+        article_id={article_id}
+        onCommentPosted={handleNewComment}
+      />
     </section>
   );
 }
