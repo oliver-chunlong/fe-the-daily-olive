@@ -1,18 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function NavBar({ setOrderBy, orderBy }) {
+function NavBar({}) {
   const [input, setInput] = useState("");
   const navigate = useNavigate();
 
   function handleSearch() {
-    if (input.trim()) {
-      navigate(`/topics/${input.trim().toLowerCase()}`);
+    if (input) {
+      navigate(`/topics/${input.toLowerCase()}`);
     }
-  }
-
-  function handleSort() {
-    setOrderBy(orderBy === "asc" ? "desc" : "asc");
   }
 
   return (
@@ -24,9 +20,6 @@ function NavBar({ setOrderBy, orderBy }) {
         onChange={(event) => setInput(event.target.value)}
       />
       <button onClick={handleSearch}>Search</button>
-      <button onClick={handleSort}>
-        Sort: {orderBy === "asc" ? "Ascending" : "Descending"}
-      </button>
     </nav>
   );
 }
