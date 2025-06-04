@@ -23,7 +23,7 @@ The Daily Olive frontend lets you:
 | --------------------- | ----------------------------------------- |
 | React                 | Component-based UI library                |
 | React Router          | Client-side routing                       |
-| Fetch API             | Handling HTTP requests to the backend     |
+| Axios                 | Handling HTTP requests to the backend     |
 | CSS Modules           | Component styling                         |
 | Vite                  | Build tool and dev server                 |
 
